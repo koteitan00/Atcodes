@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+#include <string>
+#include<algorithm>
+using namespace std;  
+
+int main(){
+    vector<string> w = {"Monday","Tuesday","Wednesday","Thursday","Friday"}; 
+    string day;
+    cin >> day;
+    vector<string>::iterator itr = find(w.begin(),w.end(),day); //ここで配列内のイテレータを取得、書き方に注意→要素があるか確定していない場合は
+　　//if (itr == v.cend()) このようにitrにv.end()が入るため条件分けすること
+    int rest = distance(w.begin(),itr);　//添え字取得
+    cout << rest;
+}
