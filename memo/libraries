@@ -1,1 +1,9 @@
 accumulate(v.begin(),v.end(),0); //配列要素の合計
+
+vector<int> v(5);    //配列内の重複を削除するコード,要素数が指定されていない場合は適宜変更
+    for (auto& num : v)  //vectorに収納する部分
+	{
+		cin >> num;
+	}
+
+sort(v.begin(),v.end()); //ソート
