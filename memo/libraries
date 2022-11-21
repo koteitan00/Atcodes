@@ -7,3 +7,5 @@ vector<int> v(5);    //配列内の重複を削除するコード,要素数が�
 	}
 
 sort(v.begin(),v.end()); //ソート
+  
+cout << fixed << setprecision(3) << num; //小数桁数指定
