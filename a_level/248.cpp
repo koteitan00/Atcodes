@@ -4,21 +4,12 @@
 using namespace std;  
 
 int main(){
-  int a,b,c,d,e,f,x;
-  cin >> a >> b >> c >> d >> e >> f >> x;
-  int t_set,t_rem,Takahashi;
-  int a_set,a_rem,Aoki;
-  t_set = x / (a+c);
-  t_rem = x % (a+c);
-  if(t_rem > a)t_rem = a;
-  Takahashi = a*b*t_set+t_rem*b;
+  string s;cin >> s;
+  vector<int> v(s.size());
+  for(int i = 0;i < 9;i++){
+  v.at(i) = (int)(s[i] - '0');
+  }
+  int n = accumulate(v.begin(),v.end(),0);
   
-  
-  a_set = x / (d+f);
-  a_rem = x % (d+f);
-  if(a_rem > d)a_rem = d;
-  Aoki = d*e*a_set+a_rem*e;
-  if(Aoki>Takahashi)cout << "Aoki";
-  else if(Aoki == Takahashi)cout << "Draw";
-  else cout << "Takahashi";
+  cout << 45 - n;
   }
